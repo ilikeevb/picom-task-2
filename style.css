@@ -1,0 +1,22 @@
+@media screen and (min-width: 800px) {
+    .posts {
+        width: 50vw;
+    }
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    margin-bottom: 15px;
+}
+
+.post__title {
+    font-weight: 600;
+}
+
+.post__body {
+    text-align: justify;
+}

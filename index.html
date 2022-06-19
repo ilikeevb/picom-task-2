@@ -1,0 +1,39 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задание 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="app" v-cloak>
+            <div class="posts">
+                <div class="container">
+                    <div class="posts__list">
+                        <div class="posts__post post" v-for="post in posts" :key="post.id">
+                            <div class="post__title">
+                                {{ post.title }}
+                            </div>
+                            <div class="post__body">
+                                {{ post.body }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posts__loading" v-if="more">
+                    <h3>Загрузка...</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="lib/vue.global.prod.js"></script>
+        <script src="lib/axios.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+    </html>
